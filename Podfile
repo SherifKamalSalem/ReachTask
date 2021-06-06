@@ -6,9 +6,7 @@ target 'ReachTask' do
   use_frameworks!
 
   # Pods for ReachTask
-    pod 'RxSwift'
-    pod 'RxCocoa'
-
+    
 
   target 'ReachTaskTests' do
     inherit! :search_paths

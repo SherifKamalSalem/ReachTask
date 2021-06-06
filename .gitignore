@@ -62,7 +62,7 @@ fastlane/test_output
 
 # Bundler
 .bundle/
-
+Pods
 # Code Injection
 #
 # After new code Injection tools there's a generated folder /iOSInjectionProject
