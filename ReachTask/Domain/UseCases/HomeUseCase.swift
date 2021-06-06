@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 public protocol HomeUseCase {
-    func getCategories() -> Observable<[Categories]>
+    func getCategories() -> Observable<Categories>
 }
 
