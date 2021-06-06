@@ -11,6 +11,12 @@ public struct APIUsers: Decodable {
     let data: [APIUsersInfo]
 }
 
+extension APIUsers {
+    func toDomain() -> Users {
+        .init(data: data.map { $0.toDomain() } )
+    }
+}
+
 
 // MARK: - UsersInfo
 public struct APIUsersInfo: Decodable {
@@ -22,3 +28,13 @@ public struct APIUsersInfo: Decodable {
     let coverPhoto: String?
     let backgroundImage, phoneBackground: String?
 }
+
+extension APIUsersInfo {
+    func toDomain() -> UsersInfo {
+        .init(object: object, id: id, username: username,
+              name: name, bio: bio, profilePicture: profilePicture,
+              coverPhoto: coverPhoto, backgroundImage: backgroundImage,
+              phoneBackground: phoneBackground)
+    }
+}
+
