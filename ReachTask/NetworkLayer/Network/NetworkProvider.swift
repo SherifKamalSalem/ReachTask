@@ -11,7 +11,7 @@ final class NetworkProvider {
     private let apiEndpoint: String
 
     public init() {
-        apiEndpoint = "https://api.dev.reachnetwork.co/api/v1/"
+        apiEndpoint = "https://api.dev.reachnetwork.co/api/v1"
     }
 
     public func makeHomeNetwork() -> HomeNetwork {
