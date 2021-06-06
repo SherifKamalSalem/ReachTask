@@ -8,13 +8,13 @@
 import Foundation
 
 // MARK: - Users
-struct Users {
+public struct Users {
     let data: [UsersInfo]
 }
 
 
 // MARK: - UsersInfo
-struct UsersInfo: Codable {
+public struct UsersInfo: Codable {
     let object: String
     let id: Int
     let username: String
