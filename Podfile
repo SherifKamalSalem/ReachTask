@@ -8,6 +8,7 @@ target 'ReachTask' do
   # Pods for ReachTask
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxAlamofire'
 
   target 'ReachTaskTests' do
     inherit! :search_paths
