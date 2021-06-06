@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		987CD020266D33A2003DA9F6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD01F266D33A2003DA9F6 /* Categories.swift */; };
 		987CD023266D34DB003DA9F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD022266D34DB003DA9F6 /* User.swift */; };
 		987CD026266D3705003DA9F6 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD025266D3705003DA9F6 /* HomeUseCase.swift */; };
+		987CD028266D42DA003DA9F6 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD027266D42DA003DA9F6 /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		987CD01F266D33A2003DA9F6 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		987CD022266D34DB003DA9F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		987CD025266D3705003DA9F6 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		987CD027266D42DA003DA9F6 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		B1FF3707443174C17D626FFC /* Pods-ReachTask-ReachTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReachTask-ReachTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReachTask-ReachTaskUITests/Pods-ReachTask-ReachTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2F755BE6E14F471DF2B0158 /* Pods-ReachTask-ReachTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReachTask-ReachTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-ReachTask-ReachTaskUITests/Pods-ReachTask-ReachTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7BD97389526831E93D2CC10 /* Pods-ReachTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReachTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-ReachTaskTests/Pods-ReachTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 				D7BD97389526831E93D2CC10 /* Pods-ReachTaskTests.debug.xcconfig */,
 				3736C0BA1C89F8433AB2796C /* Pods-ReachTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -198,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				987CD025266D3705003DA9F6 /* HomeUseCase.swift */,
+				987CD027266D42DA003DA9F6 /* UseCaseProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -446,6 +448,7 @@
 				987CD020266D33A2003DA9F6 /* Categories.swift in Sources */,
 				987CD023266D34DB003DA9F6 /* User.swift in Sources */,
 				987CCFF1266D31D9003DA9F6 /* SceneDelegate.swift in Sources */,
+				987CD028266D42DA003DA9F6 /* UseCaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
