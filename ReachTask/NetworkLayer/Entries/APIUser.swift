@@ -32,7 +32,7 @@ public struct APIUsersInfo: Decodable {
 extension APIUsersInfo {
     func toDomain() -> UsersInfo {
         .init(object: object, id: id, username: username,
-              name: name, bio: bio, profilePicture: profilePicture,
+              name: name ?? "", bio: bio, profilePicture: profilePicture,
               coverPhoto: coverPhoto, backgroundImage: backgroundImage,
               phoneBackground: phoneBackground)
     }
