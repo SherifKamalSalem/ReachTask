@@ -13,6 +13,7 @@ final class Network<T: Decodable> {
     
     private let endPoint: String
     private let scheduler: ConcurrentDispatchQueueScheduler
+    private let decoder = JSONDecoder()
     
     init(_ endPoint: String) {
         self.endPoint = endPoint
@@ -26,7 +27,8 @@ final class Network<T: Decodable> {
             .debug()
             .observe(on: scheduler)
             .map({ data -> T in
-                return try JSONDecoder().decode(T.self, from: data)
+                self.decoder.keyDecodingStrategy = .convertFromSnakeCase
+                return try self.decoder.decode(T.self, from: data)
             })
     }
 }

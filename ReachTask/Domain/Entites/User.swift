@@ -15,9 +15,9 @@ public struct Users {
 
 // MARK: - UsersInfo
 public struct UsersInfo: Codable {
-    let object: String
-    let id: Int
-    let username: String
+    let object: String?
+    let id: Int?
+    let username: String?
     let name: String
     let bio: String?
     let profilePicture: String?
