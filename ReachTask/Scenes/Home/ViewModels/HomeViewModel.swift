@@ -23,10 +23,12 @@ class HomeViewModel: ViewModelType {
     }
     
     private let useCase: HomeUseCase
+    private let offersUseCase: OffersUseCase
     private let navigator: HomeNavigator
     
-    init(useCase: HomeUseCase, navigator: HomeNavigator) {
+    init(useCase: HomeUseCase, offersUseCase: OffersUseCase, navigator: HomeNavigator) {
         self.useCase = useCase
+        self.offersUseCase = offersUseCase
         self.navigator = navigator
     }
     
