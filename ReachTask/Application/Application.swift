@@ -12,9 +12,11 @@ final class Application {
     static let shared = Application()
 
     private let networkUseCaseProvider: UseCaseProvider
+    private let offersNetworkUseCaseProvider: OffersUseCaseProvider
 
     private init() {
         self.networkUseCaseProvider = UseCaseProviderImplementation()
+        self.offersNetworkUseCaseProvider = OffersUseCaseProviderImplementation()
     }
 
     func configureMainInterface(in window: UIWindow) {
@@ -27,6 +29,7 @@ final class Application {
                 selectedImage: nil)
         let networkNavigator = DefaultHomeNavigator(
             services: networkUseCaseProvider,
+            offersServices: offersNetworkUseCaseProvider,
             navigationController: navigationController,
             storyBoard: storyboard
         )
