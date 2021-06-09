@@ -8,22 +8,22 @@
 import Foundation
 
 // MARK: - Offers
-struct Offers {
+public struct Offers {
     let data: OffersInfo?
 }
 
 // MARK: - DataClass
-struct OffersInfo {
+public struct OffersInfo {
     let offers: OffersData?
 }
 
 // MARK: - Games
-struct OffersData {
+public struct OffersData {
     let data: [Offer]?
 }
 
 // MARK: - Datum
-struct Offer {
+public struct Offer {
     let id: Int
     let title: String?
     let coverImage, bannerImage: String?

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Offers
-struct APIOffers {
+public struct APIOffers: Decodable {
     let data: APIOffersInfo?
 }
 
@@ -20,7 +20,7 @@ extension APIOffers {
 
 
 // MARK: - DataClass
-struct APIOffersInfo {
+public struct APIOffersInfo: Decodable {
     let offers: APIOffersData?
 }
 
@@ -31,7 +31,7 @@ extension APIOffersInfo {
 }
 
 // MARK: - Games
-struct APIOffersData {
+public struct APIOffersData: Decodable {
     let data: [APIOffer]?
 }
 
@@ -42,7 +42,7 @@ extension APIOffersData {
 }
 
 // MARK: - Datum
-struct APIOffer {
+public struct APIOffer: Decodable {
     let id: Int
     let title: String?
     let coverImage, bannerImage: String?
