@@ -19,13 +19,16 @@ class DefaultHomeNavigator: HomeNavigator {
     private let storyBoard: UIStoryboard
     private let navigationController: UINavigationController
     private let services: UseCaseProvider
+    private let offersServices: OffersUseCaseProvider
 
     // MARK: - Init
     
     init(services: UseCaseProvider,
+         offersServices: OffersUseCaseProvider,
          navigationController: UINavigationController,
          storyBoard: UIStoryboard) {
         self.services = services
+        self.offersServices = offersServices
         self.navigationController = navigationController
         self.storyBoard = storyBoard
     }
@@ -36,6 +39,7 @@ class DefaultHomeNavigator: HomeNavigator {
         guard let viewController = storyBoard.instantiateViewController(withClass: HomeViewController.self) else { return }
         viewController.viewModel = HomeViewModel(
             useCase: services.makeHomeUseCase(),
+            offersUseCase: offersServices.makeOffersUseCase(),
             navigator: self
         )
         navigationController.pushViewController(viewController, animated: true)
