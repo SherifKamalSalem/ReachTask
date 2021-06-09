@@ -18,4 +18,9 @@ final class NetworkProvider {
         let network = Network<APICategories>(apiEndpoint)
         return HomeNetwork(network: network)
     }
+    
+    public func makeOffersNetwork() -> OffersNetwork {
+        let network = Network<APIOffers>(apiEndpoint)
+        return OffersNetwork(network: network)
+    }
 }
