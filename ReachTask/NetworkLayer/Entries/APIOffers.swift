@@ -13,7 +13,7 @@ public struct APIOffers: Decodable {
 }
 
 extension APIOffers {
-    func toDomain() -> APIOffers {
+    func toDomain() -> Offers {
         return .init(data: data?.toDomain())
     }
 }
@@ -25,7 +25,7 @@ public struct APIOffersInfo: Decodable {
 }
 
 extension APIOffersInfo {
-    func toDomain() -> APIOffersInfo {
+    func toDomain() -> OffersInfo {
         return .init(offers: offers?.toDomain())
     }
 }
@@ -36,7 +36,7 @@ public struct APIOffersData: Decodable {
 }
 
 extension APIOffersData {
-    func toDomain() -> APIOffersData {
+    func toDomain() -> OffersData {
         return .init(data: data?.compactMap({ $0.toDomain() }))
     }
 }
@@ -54,7 +54,7 @@ public struct APIOffer: Decodable {
 }
 
 extension APIOffer {
-    func toDomain() -> APIOffer {
-        return .init(id: id, title: title, coverImage: coverImage, bannerImage: bannerImage, cta: cta, ctaURL: ctaURL, ctaTextColor: ctaTextColor, ctaBackgroundColor: ctaBackgroundColor, dueDate: dueDate, user: user, categories: categories)
+    func toDomain() -> Offer {
+        return .init(id: id, title: title, coverImage: coverImage, bannerImage: bannerImage, cta: cta, ctaURL: ctaURL, ctaTextColor: ctaTextColor, ctaBackgroundColor: ctaBackgroundColor, dueDate: dueDate, user: user?.toDomain(), categories: categories?.compactMap({ $0.toDomain() }))
     }
 }
