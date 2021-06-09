@@ -39,6 +39,13 @@
 		987CD04A266D628B003DA9F6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD049266D628B003DA9F6 /* UserViewModel.swift */; };
 		987CD04C266D6453003DA9F6 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD04B266D6453003DA9F6 /* CategoryViewModel.swift */; };
 		987CD04E266D65B8003DA9F6 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CD04D266D65B8003DA9F6 /* ErrorTracker.swift */; };
+		98BFB323267146960045A1B6 /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB322267146960045A1B6 /* Offers.swift */; };
+		98BFB325267147E90045A1B6 /* APIOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB324267147E90045A1B6 /* APIOffers.swift */; };
+		98BFB327267164190045A1B6 /* OffersNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB326267164190045A1B6 /* OffersNetwork.swift */; };
+		98BFB329267165180045A1B6 /* OffersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB328267165180045A1B6 /* OffersUseCase.swift */; };
+		98BFB32B2671675C0045A1B6 /* OffersUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB32A2671675C0045A1B6 /* OffersUseCaseImplementation.swift */; };
+		98BFB32D2671677F0045A1B6 /* OffersUseCaseProviderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB32C2671677F0045A1B6 /* OffersUseCaseProviderImplementation.swift */; };
+		98BFB32F26716A110045A1B6 /* OffersUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFB32E26716A110045A1B6 /* OffersUseCaseProvider.swift */; };
 		98ECD30C266E736F00EEA40F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECD30B266E736F00EEA40F /* HomeViewController.swift */; };
 		98ECD30F266EAC9600EEA40F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98ECD30D266EAC9600EEA40F /* CategoryCell.xib */; };
 		98ECD310266EAC9600EEA40F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ECD30E266EAC9600EEA40F /* CategoryCell.swift */; };
@@ -105,6 +112,13 @@
 		987CD049266D628B003DA9F6 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		987CD04B266D6453003DA9F6 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		987CD04D266D65B8003DA9F6 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		98BFB322267146960045A1B6 /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
+		98BFB324267147E90045A1B6 /* APIOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOffers.swift; sourceTree = "<group>"; };
+		98BFB326267164190045A1B6 /* OffersNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersNetwork.swift; sourceTree = "<group>"; };
+		98BFB328267165180045A1B6 /* OffersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUseCase.swift; sourceTree = "<group>"; };
+		98BFB32A2671675C0045A1B6 /* OffersUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUseCaseImplementation.swift; sourceTree = "<group>"; };
+		98BFB32C2671677F0045A1B6 /* OffersUseCaseProviderImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUseCaseProviderImplementation.swift; sourceTree = "<group>"; };
+		98BFB32E26716A110045A1B6 /* OffersUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUseCaseProvider.swift; sourceTree = "<group>"; };
 		98ECD30B266E736F00EEA40F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		98ECD30D266EAC9600EEA40F /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		98ECD30E266EAC9600EEA40F /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -259,6 +273,7 @@
 			children = (
 				987CD01F266D33A2003DA9F6 /* Categories.swift */,
 				987CD022266D34DB003DA9F6 /* User.swift */,
+				98BFB322267146960045A1B6 /* Offers.swift */,
 			);
 			path = Entites;
 			sourceTree = "<group>";
@@ -267,7 +282,9 @@
 			isa = PBXGroup;
 			children = (
 				987CD025266D3705003DA9F6 /* HomeUseCase.swift */,
+				98BFB328267165180045A1B6 /* OffersUseCase.swift */,
 				987CD027266D42DA003DA9F6 /* UseCaseProvider.swift */,
+				98BFB32E26716A110045A1B6 /* OffersUseCaseProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -288,6 +305,7 @@
 			children = (
 				987CD02B266D45A6003DA9F6 /* APICategories.swift */,
 				987CD02D266D462D003DA9F6 /* APIUser.swift */,
+				98BFB324267147E90045A1B6 /* APIOffers.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -297,6 +315,8 @@
 			children = (
 				987CD030266D46DC003DA9F6 /* HomeUseCaseImplementation.swift */,
 				981A43F226700B0200389DB1 /* UseCaseProviderImplementation.swift */,
+				98BFB32A2671675C0045A1B6 /* OffersUseCaseImplementation.swift */,
+				98BFB32C2671677F0045A1B6 /* OffersUseCaseProviderImplementation.swift */,
 			);
 			path = UseCasesImplementation;
 			sourceTree = "<group>";
@@ -314,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				987CD038266D4CEB003DA9F6 /* HomeNetwork.swift */,
+				98BFB326267164190045A1B6 /* OffersNetwork.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -631,15 +652,18 @@
 				981A43F126700A8300389DB1 /* Application.swift in Sources */,
 				98ECD31E266EBC5300EEA40F /* ItemCell.swift in Sources */,
 				987CD026266D3705003DA9F6 /* HomeUseCase.swift in Sources */,
+				98BFB32D2671677F0045A1B6 /* OffersUseCaseProviderImplementation.swift in Sources */,
 				987CD039266D4CEB003DA9F6 /* HomeNetwork.swift in Sources */,
 				987CCFF3266D31D9003DA9F6 /* ViewController.swift in Sources */,
 				987CCFEF266D31D9003DA9F6 /* AppDelegate.swift in Sources */,
+				98BFB32F26716A110045A1B6 /* OffersUseCaseProvider.swift in Sources */,
 				987CD020266D33A2003DA9F6 /* Categories.swift in Sources */,
 				981A43EE267007F400389DB1 /* UIStoryboard+Extension.swift in Sources */,
 				98ECD30C266E736F00EEA40F /* HomeViewController.swift in Sources */,
 				987CD023266D34DB003DA9F6 /* User.swift in Sources */,
 				987CD036266D4CAC003DA9F6 /* NetworkProvider.swift in Sources */,
 				987CD04A266D628B003DA9F6 /* UserViewModel.swift in Sources */,
+				98BFB323267146960045A1B6 /* Offers.swift in Sources */,
 				987CD034266D4776003DA9F6 /* Network.swift in Sources */,
 				987CD043266D5AFF003DA9F6 /* ViewModelType.swift in Sources */,
 				987CD04C266D6453003DA9F6 /* CategoryViewModel.swift in Sources */,
@@ -653,10 +677,14 @@
 				987CD047266D6022003DA9F6 /* Observable+Extensions.swift in Sources */,
 				987CD02E266D462D003DA9F6 /* APIUser.swift in Sources */,
 				987CD031266D46DC003DA9F6 /* HomeUseCaseImplementation.swift in Sources */,
+				98BFB32B2671675C0045A1B6 /* OffersUseCaseImplementation.swift in Sources */,
 				987CD028266D42DA003DA9F6 /* UseCaseProvider.swift in Sources */,
 				987CD04E266D65B8003DA9F6 /* ErrorTracker.swift in Sources */,
 				98ECD310266EAC9600EEA40F /* CategoryCell.swift in Sources */,
+				98BFB327267164190045A1B6 /* OffersNetwork.swift in Sources */,
+				98BFB329267165180045A1B6 /* OffersUseCase.swift in Sources */,
 				98ECD316266EBB4100EEA40F /* UITableView+Extension.swift in Sources */,
+				98BFB325267147E90045A1B6 /* APIOffers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
