@@ -10,5 +10,6 @@ import RxSwift
 
 public protocol HomeUseCase {
     func getCategories() -> Observable<Categories>
+    func getOffers() -> Observable<Offers>
 }
 
