@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
     
     private func setupView() {
         tableView.register(nibWithCellClass: CategoryCell.self)
-        tableView.register(nib: CategorySectionHeaderView.nib, withHeaderFooterViewClass: CategorySectionHeaderView.self)
         tableView.dataSource = nil
         tableView.delegate = nil
         tableView.rx
