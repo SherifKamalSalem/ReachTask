@@ -65,3 +65,34 @@ class HomeViewController: UIViewController {
     }
     
 }
+
+extension HomeViewController {
+    private func populateAllCategoriesTableView(with categories: [CategoryViewModel]) {
+        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, CategoryViewModel>>(configureCell: { _, table, indexPath, item in
+            let cell = table.dequeueReusableCell(withClass: CategoryCell.self)
+            cell.configure(viewModel: item)
+            return cell
+        })
+        
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].model.capitalized
+        }
+        
+        
+        let sections = categories.compactMap({ SectionModel(model: $0.slug, items: [$0]) })
+        Observable.just(sections)
+            .debug()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+}
