@@ -19,6 +19,7 @@ class HomeViewModel: ViewModelType {
     struct Output {
         let fetching: Driver<Bool>
         let categories: Driver<[CategoryViewModel]>
+        let offers: Driver<OffersViewModel?>
         let error: Driver<Error>
     }
     
@@ -43,11 +44,21 @@ class HomeViewModel: ViewModelType {
                 .asDriverOnErrorJustComplete()
                 .map { $0.data.map { CategoryViewModel(with: $0) } }
         }
+        
+        let offers = input.trigger.flatMapFirst {
+            return self.offersUseCase.getOffers()
+                .trackActivity(activityIndicator)
+                .trackError(errorTracker)
+                .asDriverOnErrorJustComplete()
+                .map { $0.data?.offers.map({ OffersViewModel(with: $0.data ?? []) }) }
+        }
+        
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.asDriver()
         
         return Output(fetching: fetching,
                       categories: categories,
+                      offers: offers,
                       error: errors)
     }
 }
