@@ -48,8 +48,8 @@ extension APIMeta {
 
 // MARK: - Pagination
 public struct APIPagination: Decodable {
-    let total, count, perPage, currentPage: Int
-    let totalPages: Int
+    let total, count, perPage, currentPage: Int?
+    let totalPages: Int?
     let links: String?
 }
 
