@@ -11,8 +11,6 @@ final class CategoryViewModel {
     let id: Int
     let slug: String
     let usersViewModels: [UserViewModel]
-    var profilePicture: URL? = nil
-    var coverPhoto: URL? = nil
     
     init(with category: Category) {
         self.id = category.id
