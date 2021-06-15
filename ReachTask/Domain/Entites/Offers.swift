@@ -27,9 +27,5 @@ public struct Offer {
     let id: Int
     let title: String?
     let coverImage, bannerImage: String?
-    let cta: String?
     let ctaURL: String?
-    let ctaTextColor, ctaBackgroundColor, dueDate: String?
-    let user: Users?
-    let categories: [Category]?
 }

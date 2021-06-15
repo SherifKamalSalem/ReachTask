@@ -46,15 +46,11 @@ public struct APIOffer: Decodable {
     let id: Int
     let title: String?
     let coverImage, bannerImage: String?
-    let cta: String?
     let ctaURL: String?
-    let ctaTextColor, ctaBackgroundColor, dueDate: String?
-    let user: APIUsers?
-    let categories: [APICategory]?
 }
 
 extension APIOffer {
     func toDomain() -> Offer {
-        return .init(id: id, title: title, coverImage: coverImage, bannerImage: bannerImage, cta: cta, ctaURL: ctaURL, ctaTextColor: ctaTextColor, ctaBackgroundColor: ctaBackgroundColor, dueDate: dueDate, user: user?.toDomain(), categories: categories?.compactMap({ $0.toDomain() }))
+        return .init(id: id, title: title, coverImage: coverImage, bannerImage: bannerImage, ctaURL: ctaURL)
     }
 }
