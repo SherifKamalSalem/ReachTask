@@ -1,0 +1,6 @@
+framework module Pods_ReachTask {
+  umbrella header "Pods-ReachTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
