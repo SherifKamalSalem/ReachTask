@@ -19,8 +19,6 @@ class CategoryCell: UITableViewCell {
         setupView()
     }
     
-    private var viewModel: CategoryViewModel!
-    
     private func setupView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 8
@@ -28,16 +26,16 @@ class CategoryCell: UITableViewCell {
         layout.itemSize = CGSize(width: 200, height: 150)
         collectionView!.collectionViewLayout = layout
         collectionView.register(nibWithCellClass: ItemCell.self)
+        collectionView.register(nibWithCellClass: OfferCollectionViewCell.self)
         collectionView.rx
             .setDelegate(self)
             .disposed(by: disposeBag)
     }
     
-    func configure(viewModel: CategoryViewModel) {
-        self.viewModel = viewModel
+    func configure(with category: CategoryViewModel, indexPath: IndexPath) {
         self.collectionView.delegate = nil
         self.collectionView.dataSource = nil
-        populateAllUsersCollectionView(with: viewModel.usersViewModels)
+        populateAllUsersCollectionView(with: category.usersViewModels)
     }
 }
 
